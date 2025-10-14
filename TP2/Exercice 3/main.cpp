@@ -8,6 +8,4 @@ tab.ajouter(15);
 tab.afficher();
 tab1.retirer(10);
 tab1.afficher();
-
-
 }

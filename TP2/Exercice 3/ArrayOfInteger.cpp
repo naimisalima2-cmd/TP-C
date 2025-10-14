@@ -6,7 +6,7 @@ int ArrayOfInteger::instanceCount = 0;
 
 ArrayOfInteger::ArrayOfInteger() {
     capacite = 10;
-    taille = 0;
+    taille;
     Tab = new int[capacite];
     instanceCount++;
 }
@@ -58,8 +58,7 @@ void ArrayOfInteger::ajouter(int value) {
             delete[] Tab;
             Tab = newTab;
         }
-        Tab[taille] = value;
-        taille++;
+        Tab[taille++] = value;
     }
 }
 
