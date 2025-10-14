@@ -2,10 +2,22 @@
 #include <iostream>
 using namespace std;
 
+
 bool Date::checkDate(int j, int m, int a){
-    return (j >= 1 && j <= 31) && (m >= 1 && m <= 12) && (a >= 2000 && a <= 2050);}
+    if (j < 1 || j> 31) {
+        return false;
+    }
+    else if (m < 1 || m >12){
+        return false;
+    }
+    else if (a < 2000 || a >2050){
+        return false;    }
+    else return true;
+}
+
+
 Date::Date(int j, int m, int a) {
-    if (checkDate(j, m, a)) {
+    if (checkDate(j, m, a)==true) {
         jour = j;
         mois = m;
         annee = a;
@@ -30,6 +42,6 @@ void Date::setAnnee(int a) {
     if (checkDate(jour, mois, annee)) annee=a;}
 
 void Date::affiche() const {
-    cout << jour << "/" << mois << "/" << annee ;
+    cout << jour << "/" << mois << "/" << annee << endl ;
 }
 
