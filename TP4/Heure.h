@@ -1,21 +1,24 @@
 #ifndef HEURE_H
 #define HEURE_H
 
-#include <iostream>
-using namespace std;
-
 class Heure {
 private:
-    int heures;
-    int minutes;
+    int heures, minutes;
 
 public:
     Heure();
     Heure(int h, int m);
-    void saisie();
+
     void affiche() const;
+
+    void saisie();  
+
+    bool estEgal(const Heure& h) const;
+    bool estSuperieur(const Heure& h) const;
+
     int getHeures() const;
     int getMinutes() const;
+
     void setHeures(int h);
     void setMinutes(int m);
 };

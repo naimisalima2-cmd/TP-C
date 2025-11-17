@@ -68,3 +68,16 @@ void RDV::setParticipants(string* ps) {
 void RDV::setParticipant(int i, string s) {
     if (i >= 0 && i < 10) participants[i] = s;
 }
+Date RDV::getDate() const { return date; }
+Heure RDV::getHeure() const { return heure; }
+
+bool RDV::estEgal(const RDV& r) const {
+    return date.estEgal(r.date) && heure.estEgal(r.heure);
+}
+
+bool RDV::estSuperieur(const RDV& r) const {
+    if (date.estEgal(r.date))
+        return heure.estSuperieur(r.heure);
+
+    return date.estSuperieur(r.date);
+}

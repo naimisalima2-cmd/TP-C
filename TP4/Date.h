@@ -1,27 +1,25 @@
 #ifndef DATE_H
 #define DATE_H
 
-#include <iostream>
-using namespace std;
-
 class Date {
 private:
-    int jour;
-    int mois;
-    int annee;
+    int jour, mois, annee;
 
 public:
     Date();
     Date(int j, int m, int a);
-    void saisie();
+
     void affiche() const;
     bool checkDate(int j, int m, int a) const;
+
+    void saisie();
+
+    bool estEgal(const Date& d) const;
+    bool estSuperieur(const Date& d) const;
+
     int getJour() const;
     int getMois() const;
     int getAnnee() const;
-    void setJour(int j);
-    void setMois(int m);
-    void setAnnee(int a);
 };
 
 #endif

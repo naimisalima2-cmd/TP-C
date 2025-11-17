@@ -35,3 +35,12 @@ int Heure::getHeures() const { return heures; }
 int Heure::getMinutes() const { return minutes; }
 void Heure::setHeures(int h) { if (h >= 0 && h <= 23) heures = h; }
 void Heure::setMinutes(int m) { if (m >= 0 && m <= 59) minutes = m; }
+
+bool Heure::estEgal(const Heure& h) const {
+    return heures == h.heures && minutes == h.minutes;
+}
+
+bool Heure::estSuperieur(const Heure& h) const {
+    if (heures != h.heures) return heures > h.heures;
+    return minutes > h.minutes;
+}
