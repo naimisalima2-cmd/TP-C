@@ -22,10 +22,15 @@ class Personnel : public Personne {
     void setSalaire(float s);
 
     // Méthode calculSalaire()
-    float calculSalaire() const;
+    virtual float calculSalaire() const {
+        return salaire;
+    }
 
-    // Affichage
-    void affiche() const;
+    //Affichage 
+   virtual void affiche() const {
+        Personne::affiche();
+        cout << "Salaire de base : " << salaire << endl;
+    }
 };
 
 #endif
