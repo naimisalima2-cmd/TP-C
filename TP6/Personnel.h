@@ -7,10 +7,10 @@
 using namespace std;
 
 class Personnel : public Personne {
-private:
+    private:
     float salaire;
-
-public:
+    
+    public:
     // Constructeur 
     Personnel(string nom, string prenom,
               float salaire = 0,
