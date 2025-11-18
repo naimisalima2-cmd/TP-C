@@ -11,7 +11,7 @@ private:
     float salaire;
 
 public:
-    // Constructeur (salaire par défaut = 0)
+    // Constructeur 
     Personnel(string nom, string prenom,
               float salaire = 0,
               string adresse = "",
