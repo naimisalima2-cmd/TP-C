@@ -15,13 +15,4 @@ float Personnel::getSalaire() const { return salaire; }
 // Setter
 void Personnel::setSalaire(float s) { salaire = s; }
 
-// calculSalaire() 
-float Personnel::calculSalaire() const {
-    return salaire;
-}
-
-// Affichage
-void Personnel::affiche() const {
-    Personne::affiche();
-    cout << "Salaire : " << salaire << " €" << endl;
-}
+// Pas de calculSalaire()  (fonction virtuelle pure)

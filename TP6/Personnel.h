@@ -1,4 +1,3 @@
-
 #ifndef PERSONNEL_H
 #define PERSONNEL_H
 
@@ -7,10 +6,10 @@
 using namespace std;
 
 class Personnel : public Personne {
-    private:
+private:
     float salaire;
     
-    public:
+public:
     // Constructeur 
     Personnel(string nom, string prenom,
               float salaire = 0,
@@ -21,13 +20,11 @@ class Personnel : public Personne {
     float getSalaire() const;
     void setSalaire(float s);
 
-    // Méthode calculSalaire()
-    virtual float calculSalaire() const {
-        return salaire;
-    }
+    // Méthode virtuelle pure 
+    virtual float calculSalaire() const = 0;
 
-    //Affichage 
-   virtual void affiche() const {
+    // Affichage 
+    virtual void affiche() const {
         Personne::affiche();
         cout << "Salaire de base : " << salaire << endl;
     }
