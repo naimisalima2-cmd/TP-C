@@ -2,6 +2,7 @@
 #define PERSONNELADMIN_H
 
 #include "Personnel.h"
+#include <string>
 using namespace std;
 
 class PersonnelAdmin : public Personnel {
@@ -12,8 +13,8 @@ private:
 public:
     // Constructeur
     PersonnelAdmin(string nom, string prenom,
-                   float salaire,
-                   float taux,
+                   float salaire = 0,
+                   float taux = 0,
                    int heuresSup = 0,
                    string adresse = "",
                    string telephone = "");
@@ -25,10 +26,10 @@ public:
     void setHeuresSup(int h);
     void setTaux(float t);
 
-    float calculSalaire() const;
+    virtual float calculSalaire() const override;
 
     // Affichage
-    void affiche() const;
+    virtual void affiche() const override;
 };
 
 #endif
