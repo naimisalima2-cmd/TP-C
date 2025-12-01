@@ -100,7 +100,7 @@ double Vector::produit_scalaire(const Vector& V1, const Vector& V2) {
         s += V1.data[i] * V2.data[i];
 
     return s;
-
+}
 Vector produit_elt_droite(const Vector& V1, double k) {
 
     Vector r(V.n);
